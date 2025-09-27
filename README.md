@@ -1,9 +1,3 @@
-It seems like I can’t do more advanced data analysis right now. Please try again later.
-
-But don’t worry — I can still manually draft the **README.md** for your `Milestone_1.ipynb` based on the structure we extracted earlier. Here’s a clean version you can directly use on GitHub:
-
----
-
 # Milestone 1 Project
 
 ##  Project Overview
