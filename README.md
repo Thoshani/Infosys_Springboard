@@ -1,48 +1,86 @@
-# Milestone 1 Project
 
-##  Project Overview
+The goal of this project is to:
+1. Load and preprocess textual data from different sources (files or URLs).
+2. Generate **summaries** using pretrained models (T5, BART, PEGASUS).
+3. Perform **paraphrasing** using multiple approaches (PEGASUS, T5-Paraphrase, BART-Paraphrase).
+4. Measure **semantic similarity** between original, summarized, and paraphrased texts using SentenceTransformer.
+5. Compare and analyze results across different models.
 
-This project is part of **Milestone 1**. It demonstrates the process of **data preprocessing, exploratory data analysis, feature engineering, model training, and evaluation**.
+---
+##  Approach
+1. **Library Setup** – Installed and imported required libraries (Transformers, SentenceTransformers, etc.).
+2. **Model Loading**  
+   - Summarization: T5, BART, PEGASUS  
+   - Paraphrasing: PEGASUS, T5-Paraphrase, BART-Paraphrase  
+   - Similarity: SentenceTransformer (e.g., `all-MiniLM-L6-v2`)
+3. **Text Input Processing** –  
+   - Load text data (from URL or file).  
+   - Clean and preprocess input.  
+4. **Summarization** – Apply different summarization models and compare outputs.  
+5. **Paraphrasing** – Generate multiple paraphrased variations for each text.  
+6. **Similarity Analysis** – Compute cosine similarity between original and generated outputs to evaluate quality.  
 
-##  Installation & Setup
+---
 
-Make sure you have the following installed:
+##  Methodology
+1. **Preprocessing**  
+   - Remove unwanted characters and clean raw text.  
+   - Tokenize input text for model compatibility.  
+
+2. **Summarization**  
+   - Use each summarization model separately.  
+   - Compare results based on conciseness and readability.  
+
+3. **Paraphrasing**  
+   - Generate variations using PEGASUS, T5, and BART.  
+   - Collect multiple paraphrases for each input text.  
+
+4. **Similarity Checking**  
+   - Represent text embeddings using SentenceTransformer.  
+   - Compute cosine similarity between:  
+     - Original vs. Summary  
+     - Original vs. Paraphrase  
+     - Summary vs. Paraphrase  
+
+5. **Evaluation**  
+   - Compare similarity scores to measure semantic preservation.  
+   - Record qualitative observations on fluency, grammar, and redundancy.  
+
+---
+
+## Observations
+- **Summarization**  
+  - T5 produced concise summaries but sometimes missed context.  
+  - BART generated more fluent and context-aware summaries.  
+  - PEGASUS was strong in abstractive summarization, producing natural results.  
+
+- **Paraphrasing**  
+  - PEGASUS paraphrased with high semantic retention.  
+  - T5-Paraphrase sometimes produced shorter variants.  
+  - BART-Paraphrase balanced fluency and semantic preservation.  
+
+- **Similarity Analysis**  
+  - Summaries had lower similarity scores compared to paraphrases (expected since summarization is more reductive).  
+  - Paraphrases consistently achieved high similarity with the original (0.85–0.95).  
+  - PEGASUS outputs had the highest overlap with human-readable meaning.  
+
+---
+
+##  Results
+- Multiple models successfully generated high-quality summaries and paraphrases.  
+- SentenceTransformer effectively quantified semantic similarity.  
+- Ensemble comparison gave insights into the strengths/weaknesses of each model.  
+
+---
+
+##  Dependencies
+- Python 3.10+  
+- Transformers (`pip install transformers`)  
+- SentenceTransformers (`pip install sentence-transformers`)  
+- Torch (`pip install torch`)  
+- Pandas, NumPy  
 
 
-pip install numpy pandas matplotlib seaborn scikit-learn
 
-
-Open the notebook using Jupyter:
-
-
+# Run the notebook
 jupyter notebook final.ipynb
-
-
-##  Usage
-
-1. Clone this repository or download the notebook.
-2. Install the dependencies.
-3. Run the notebook step by step to reproduce results.
-
-##  Project Workflow
-
-* Data loading
-* Data cleaning
-* Exploratory Data Analysis (EDA)
-* Feature Engineering
-* Model Training
-* Model Evaluation
-
-##  Results & Insights
-
-The notebook demonstrates the training and evaluation of ML models, with performance metrics and visualizations. Key insights are derived from the dataset to understand patterns and improve predictions.
-
-##  Future Improvements
-
-* Enhance feature engineering
-* Try advanced ML models
-* Add hyperparameter tuning
-* Improve visualization & reporting
-
-
-
