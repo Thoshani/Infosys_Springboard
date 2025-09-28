@@ -1,3 +1,8 @@
+# Infosys_Springboard — NLP Text Processing
+
+This repository demonstrates Natural Language Processing (NLP) techniques including **summarization, paraphrasing, and similarity analysis** using Transformer models.
+
+---
 
 The goal of this project is to:
 1. Load and preprocess textual data from different sources (files or URLs).
