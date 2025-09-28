@@ -72,14 +72,23 @@ The goal of this project is to:
 - Ensemble comparison gave insights into the strengths/weaknesses of each model.  
 
 ---
-
+You can install all dependencies via:
 ##  Dependencies
 - Python 3.10+  
-- Transformers (`pip install transformers`)  
-- SentenceTransformers (`pip install sentence-transformers`)  
-- Torch (`pip install torch`)  
+- Transformers (pip install transformers`)  
+- SentenceTransformers (pip install sentence-transformers`)  
+- Torch (pip install torch`)  
 - Pandas, NumPy  
 
+# Clone the repository
+git clone https://github.com/Thoshani/Infosys_Springboard.git
+cd Infosys_Springboard
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the notebook
+jupyter notebook final.ipynb
 
 
 # Run the notebook
