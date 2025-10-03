@@ -79,29 +79,40 @@ Open the notebook:
    jupyter notebook FINAL.ipynb
 
 Run the cells in order
+
 Provide your own text files or use the sample ones
 View generated summaries, paraphrases, similarity metrics, and visualizations
 
 Example Workflow
+
 Here's a typical pipeline run:
 
 Input Text: A paragraph or full document
 Summarization:
 
 T5 generates a short, concise summary
+
 BART creates a structured summary
+
 PEGASUS produces an abstractive summary
 
 
+
 Paraphrasing: Each summary is rewritten differently
+
 Similarity Scoring: Compare summaries and paraphrases with original text
+
 Visualization: Bar charts for length and similarity, plus bigram charts for frequent patterns
+
 
 Outputs
 
 The project generates several types of outputs:
 
+
 Summaries: Multiple model outputs for the same input
+
 Paraphrases: Alternative phrasings of summaries
+
 Metrics: Length of summaries and cosine similarity with original text
 Plots: Model comparison bar charts and bigram visualizations
