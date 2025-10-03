@@ -106,8 +106,3 @@ Paraphrases: Alternative phrasings of summaries
 Metrics: Length of summaries and cosine similarity with original text
 Plots: Model comparison bar charts and bigram visualizations
 
-Files
-
-README.md: Project documentation
-requirements.txt: List of dependencies
-RetryClaude does not have the ability to run the code it generates yet.
