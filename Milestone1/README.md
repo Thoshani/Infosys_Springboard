@@ -5,7 +5,6 @@ TextMorph is a natural language processing (NLP) project that integrates **summa
 Using state-of-the-art transformer models (T5, BART, PEGASUS, and Sentence Transformers), this project demonstrates how different models perform on the same text and provides visualization tools to compare their outputs.
 
 ##  Overview
-
 Large language models can summarize or paraphrase text in many different ways.  
 But **how do their results compare?**  
 
@@ -20,7 +19,6 @@ This project is structured as a **Jupyter Notebook (`FINAL.ipynb`)**, organized 
 
 
 ##  Project Structure
-
 The notebook is divided into clear sections:
 
 ### **0. Setup**
@@ -65,7 +63,6 @@ The notebook is divided into clear sections:
 
 
 ##  Installation
-
 Clone the repository and install dependencies:
 
 
@@ -81,7 +78,6 @@ pip install transformers sentence-transformers scikit-learn matplotlib
 
 
 ##  Usage
-
 1. Open the notebook:
    jupyter notebook FINAL.ipynb 
 2. Run the cells in order.
@@ -94,7 +90,6 @@ pip install transformers sentence-transformers scikit-learn matplotlib
 
 
 ## Example Workflow
-
 Here’s a typical pipeline run:
 
 1. **Input Text**: A paragraph or full document.
@@ -113,7 +108,6 @@ Here’s a typical pipeline run:
 
 
 ##  Outputs
-
 - **Summaries**: Multiple model outputs for the same input.
 - **Paraphrases**: Alternative phrasings of summaries.
 - **Metrics**:  
@@ -123,10 +117,5 @@ Here’s a typical pipeline run:
   - Model comparison bar charts.  
   - Bigram visualizations.
 
-
-
-
-
-- `FINAL.ipynb` — Main notebook with full workflow.  
 - `README.md` — Project documentation.  
 - `requirements.txt` — List of dependencies.  
