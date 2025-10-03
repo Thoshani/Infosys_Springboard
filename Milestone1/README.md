@@ -1,6 +1,7 @@
 TextMorph: Summarization, Paraphrasing, and Similarity Analysis
 TextMorph is a natural language processing project that brings together summarization, paraphrasing, and semantic similarity analysis into one complete workflow.
 Using state-of-the-art transformer models like T5, BART, PEGASUS, and Sentence Transformers, this project shows how different models perform on the same text and provides tools to compare their outputs visually.
+
 Overview
 Large language models can summarize or paraphrase text in many different ways. But how do their results actually compare?
 TextMorph answers this question by:
@@ -11,8 +12,6 @@ Measuring similarity scores against the original text
 Visualizing the differences in length, style, and content
 Performing bigram analysis to reveal common word pair patterns
 
-This project is structured as a Jupyter Notebook called FINAL.ipynb, organized into modular parts for easy navigation.
-Project Structure
 The notebook is divided into clear sections:
 0. Setup
 
@@ -58,5 +57,50 @@ Graphical comparison of paraphrasing metrics
 Extract frequent bigrams, which are two-word sequences
 Visualize them for linguistic insights
 
+
 Installation
 Clone the repository and install dependencies:
+
+git clone https://github.com/Thoshani/Infosys_Springboard/blob/main/Milestone1/finalproject.ipynb
+cd finalproject
+pip install -r requirements.txt
+If requirements.txt is missing, install manually:
+pip install transformers sentence-transformers scikit-learn matplotlib
+Usage
+
+Open the notebook:
+
+   jupyter notebook FINAL.ipynb
+
+Run the cells in order
+Provide your own text files or use the sample ones
+View generated summaries, paraphrases, similarity metrics, and visualizations
+
+Example Workflow
+Here's a typical pipeline run:
+
+Input Text: A paragraph or full document
+Summarization:
+
+T5 generates a short, concise summary
+BART creates a structured summary
+PEGASUS produces an abstractive summary
+
+
+Paraphrasing: Each summary is rewritten differently
+Similarity Scoring: Compare summaries and paraphrases with original text
+Visualization: Bar charts for length and similarity, plus bigram charts for frequent patterns
+
+Outputs
+The project generates several types of outputs:
+
+Summaries: Multiple model outputs for the same input
+Paraphrases: Alternative phrasings of summaries
+Metrics: Length of summaries and cosine similarity with original text
+Plots: Model comparison bar charts and bigram visualizations
+
+Files
+
+README.md: Project documentation
+requirements.txt: List of dependencies
+RetryClaude does not have the ability to run the code it generates yet.
