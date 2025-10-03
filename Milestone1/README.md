@@ -13,6 +13,7 @@ Visualizing the differences in length, style, and content
 Performing bigram analysis to reveal common word pair patterns
 
 The notebook is divided into clear sections:
+
 0. Setup
 
 Install and import all required libraries
@@ -62,12 +63,17 @@ Installation
 Clone the repository and install dependencies:
 
 git clone https://github.com/Thoshani/Infosys_Springboard/blob/main/Milestone1/finalproject.ipynb
-cd finalproject
-pip install -r requirements.txt
-If requirements.txt is missing, install manually:
-pip install transformers sentence-transformers scikit-learn matplotlib
-Usage
 
+cd finalproject
+
+pip install -r requirements.txt
+
+If requirements.txt is missing, install manually:
+
+pip install transformers sentence-transformers scikit-learn matplotlib
+
+
+Usage
 Open the notebook:
 
    jupyter notebook FINAL.ipynb
@@ -92,6 +98,7 @@ Similarity Scoring: Compare summaries and paraphrases with original text
 Visualization: Bar charts for length and similarity, plus bigram charts for frequent patterns
 
 Outputs
+
 The project generates several types of outputs:
 
 Summaries: Multiple model outputs for the same input
