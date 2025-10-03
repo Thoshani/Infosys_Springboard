@@ -62,7 +62,7 @@ Visualize them for linguistic insights
 Installation
 Clone the repository and install dependencies:
 
-git clone https://github.com/Thoshani/Infosys_Springboard/blob/main/Milestone1/finalproject.ipynb
+git clone https://github.com/Thoshani/Infosys_Springboard/blob/main/Milestone1/Textmorph.ipynb
 
 cd finalproject
 
@@ -76,7 +76,7 @@ pip install transformers sentence-transformers scikit-learn matplotlib
 Usage
 Open the notebook:
 
-   jupyter notebook FINAL.ipynb
+   jupyter notebook Textmorph.ipynb
 
 Run the cells in order
 
