@@ -4,8 +4,6 @@ TextMorph is a natural language processing (NLP) project that integrates **summa
 
 Using state-of-the-art transformer models (T5, BART, PEGASUS, and Sentence Transformers), this project demonstrates how different models perform on the same text and provides visualization tools to compare their outputs.
 
----
-
 ##  Overview
 
 Large language models can summarize or paraphrase text in many different ways.  
@@ -20,7 +18,6 @@ TextMorph answers this question by:
 
 This project is structured as a **Jupyter Notebook (`FINAL.ipynb`)**, organized into modular parts.
 
----
 
 ##  Project Structure
 
@@ -95,7 +92,6 @@ pip install transformers sentence-transformers scikit-learn matplotlib
    - Similarity metrics
    - Visualizations
 
----
 
 ## Example Workflow
 
