@@ -17,9 +17,8 @@ The notebook provides:
 
 Run the first cell of the notebook:
 
-```bash
+
 !pip install ipywidgets transformers torch sentencepiece huggingface_hub pypdf evaluate scikit-learn sentence-transformers matplotlib seaborn pandas nltk textstat rouge_score accelerate --quiet
-```
 
 ### 2️Load Models
 
@@ -63,6 +62,7 @@ Below are **10 test cases** used to evaluate summarization performance across mo
 * **TinyLlama** is fastest but least detailed.
 * **Phi** gives grammatically strong but slightly verbose summaries.
 * **BART** consistently provides clear, natural, and informative results.
+* 
 
 ---
 
@@ -90,7 +90,3 @@ After 10 test evaluations:
  **Final Choice:** `BART` — Best balance between speed, readability, and accuracy.
 
 
-
----
-
-Would you like me to make this into a **downloadable `README.md` file** (so you can upload it to your GitHub or submission folder)?
