@@ -1,92 +1,154 @@
+###  Project Overview
 
+This project, **TextMorph**, was developed as part of the **Infosys Springboard Virtual Internship (Milestone 2)**.
+It focuses on building a **multi-model text summarization system** that takes long passages and generates concise, meaningful summaries using **transformer-based AI models**.
 
-This project is a **text summarization system** built in a Jupyter Notebook using **Hugging Face transformer models**.
-It compares multiple AI models — **TinyLlama**, **Phi**, and **BART** — to generate concise summaries and evaluate them on readability, accuracy, and compression.
-
-The notebook provides:
-
-* A **simple user interface** using `ipywidgets`
-* Automatic **model comparison**
-* **Metrics visualization** for summarization quality
+The notebook integrates multiple summarization techniques (abstractive + extractive) and provides an **interactive UI** using `ipywidgets` to test and compare outputs of different models.
 
 ---
 
-##  Setup Instructions
+###  Aim
 
-### 1️ Install Required Libraries
-
-Run the first cell of the notebook:
-
-
-!pip install ipywidgets transformers torch sentencepiece huggingface_hub pypdf evaluate scikit-learn sentence-transformers matplotlib seaborn pandas nltk textstat rouge_score accelerate --quiet
-
-### 2️Load Models
-
-The notebook automatically loads TinyLlama, Phi, and BART models for inference.
-
-### 3️ Run Summarization
-
-Paste any long text in the input widget → choose the model → generate summaries and compare results.
+To evaluate and compare the performance of various **text summarization models** based on accuracy, fluency, readability, and computational efficiency.
 
 ---
 
-##  User Tests & Results
-
-Below are **10 test cases** used to evaluate summarization performance across models.
-
-| **Test No.** | **Input Type**                     | **TinyLlama Summary**             | **Phi Summary**       | **BART Summary**              | **Best Model** |
-| ------------ | ---------------------------------- | --------------------------------- | --------------------- | ----------------------------- | -------------- |
-| 1            | News Article on Climate Change     | Focuses on global warming effects | Balanced summary      | Clear, concise, factual       | **BART**       |
-| 2            | Wikipedia: Artificial Intelligence | Too brief                         | Accurate but wordy    | Most coherent and natural     | **BART**       |
-| 3            | Technical Blog on Deep Learning    | Misses key terms                  | Decent explanation    | Retains structure and clarity | **BART**       |
-| 4            | Story Paragraph                    | Informal tone                     | Fluent but repetitive | Polished storytelling         | **BART**       |
-| 5            | Research Abstract                  | Misses context                    | Good academic tone    | Summarizes with key metrics   | **BART**       |
-| 6            | Movie Review                       | Too short                         | Balanced opinion      | Captures emotion and tone     | **BART**       |
-| 7            | Legal Text                         | Incomplete                        | Complex and verbose   | Simplified and accurate       | **BART**       |
-| 8            | Educational Article                | Basic summary                     | Moderate clarity      | Most readable and complete    | **BART**       |
-| 9            | Health Report                      | Slightly off-topic                | Good readability      | Precise and well-structured   | **BART**       |
-| 10           | News Editorial                     | Fragmented                        | Fair coherence        | Excellent summary and tone    | **BART**       |
+###  Objectives
+* Implement multiple transformer-based summarization models
+* Integrate an interactive UI for user input and model selection
+* Compare abstractive and extractive summarization
+* Evaluate models using ROUGE, Readability, and Similarity metrics
+* Analyze results across 10 diverse text inputs
 
 ---
 
-##  Evaluation Metrics
+###  Tools and Libraries Used
 
-| **Model** | **Avg. ROUGE-L** | **Flesch Score (Readability)** | **Compression Ratio** | **Overall Rank** |
-| --------- | ---------------- | ------------------------------ | --------------------- | ---------------- |
-| TinyLlama | 0.42             | 61.2                           | 0.27                  | 3️⃣              |
-| Phi       | 0.53             | 68.9                           | 0.31                  | 2️⃣              |
-| BART      | **0.61**         | **77.3**                       | **0.35**              |  **1st**       |
-
-**Observation:**
-
-* **TinyLlama** is fastest but least detailed.
-* **Phi** gives grammatically strong but slightly verbose summaries.
-* **BART** consistently provides clear, natural, and informative results.
-* 
+| Library                   | Purpose                                                 |
+| ------------------------- | ------------------------------------------------------- |
+| **Transformers**          | Load and run pre-trained Hugging Face models            |
+| **Torch**                 | Backend for deep learning computation                   |
+| **Sentence Transformers** | Calculate semantic similarity                           |
+| **ROUGE Score**           | Evaluate summarization overlap accuracy                 |
+| **TextStat**              | Assess readability scores                               |
+| **NLTK**                  | Preprocessing and sentence tokenization                 |
+| **ipywidgets**            | Build the interactive UI (text input, dropdown, button) |
+| **Matplotlib & Pandas**   | Visualization and data analysis                         |
 
 ---
 
-## Visualization
+### 🧠 Models Implemented
 
-The notebook also generates:
+| Model                   | Type        | Developer           | Description                                                                        |
+| ----------------------- | ----------- | ------------------- | ---------------------------------------------------------------------------------- |
+| **TinyLlama-1.1B-Chat** | Abstractive | TinyLlama Community | Lightweight summarization and chat model; fast but less detailed                   |
+| **Phi-2**               | Abstractive | Microsoft           | Compact 2.7B model trained on reasoning and education data                         |
+| **BART-Large-CNN**      | Abstractive | Meta (Facebook)     | Robust summarization model trained on CNN/DailyMail                                |
+| **Gemma-2B-IT**         | Abstractive | Google DeepMind     | Instruction-tuned model with highly fluent outputs *(requires Hugging Face token)* |
+| **TextRank**            | Extractive  | NLTK / NetworkX     | Graph-based extractive summarization algorithm                                     |
 
-* **Bar charts** comparing ROUGE & readability scores
-* **Metric history plots** across multiple user tests
+---
 
-Example:
+###  Hugging Face Token Setup (for Gemma)
 
-Model Performance Chart:
-BART > Phi > TinyLlama
+Since **Gemma-2B-IT** is a gated model:
+
+1. Create a Hugging Face account → [https://huggingface.co](https://huggingface.co)
+2. Accept Gemma’s license → [https://huggingface.co/google/gemma-2b-it](https://huggingface.co/google/gemma-2b-it)
+3. Generate an Access Token → *Profile > Settings > Access Tokens*
+4. Use in notebook:
+
+   from huggingface_hub import login
+   login()
+=
+
+###  Setup Instructions
+
+1. Install dependencies:
 
 
-## Conclusion
+   !pip install ipywidgets transformers torch sentencepiece huggingface_hub pypdf evaluate scikit-learn sentence-transformers matplotlib seaborn pandas nltk textstat rouge_score accelerate --quiet
+   
+2. Run the first few cells to import libraries and load models.
+3. Enter your Hugging Face token (for Gemma).
+4. Use the interactive UI:
 
-After 10 test evaluations:
+   * Paste text in the textbox
+   * Choose model from dropdown
+   * Click **“Summarize”** to generate and compare outputs
 
-* **BART** provided the best summaries overall — clear, accurate, and human-like.
-* **Phi** performed moderately well.
-* **TinyLlama** was fastest but less accurate.
+---
 
- **Final Choice:** `BART` — Best balance between speed, readability, and accuracy.
+###  User Tests and Results
 
+| Test No. | Input Type | TinyLlama | Phi-2 | BART | Gemma | TextRank | Best Model |
+|-----------|-------------|------------|--------|--------|-----------|-------------|
+| 1 | News (Climate Change) | General summary | Balanced | Factual | Fluent | Key phrases only | **Gemma** |
+| 2 | Wikipedia (AI) | Short | Coherent | Natural | Fluent | Limited | **BART** |
+| 3 | Technical Blog | Misses key info | Good flow | Detailed | Smooth | Extractive | **BART** |
+| 4 | Story Paragraph | Informal | Fluent | Polished | Human-like | Basic | **Gemma** |
+| 5 | Research Abstract | Vague | Academic tone | Structured | Advanced | Partial | **Phi-2** |
+| 6 | Movie Review | Short | Neutral | Captures emotion | Creative | Extracts sentiment | **Gemma** |
+| 7 | Legal Text | Incomplete | Verbose | Clear | Fluent | Extractive | **BART** |
+| 8 | Educational Content | Basic | Readable | Complete | Detailed | Good phrases | **Gemma** |
+| 9 | Health Report | Slightly off-topic | Readable | Accurate | Smooth | Core sentences | **BART** |
+| 10 | News Editorial | Fragmented | Coherent | Natural | Fluent | Surface summary | **Gemma** |
 
+---
+
+###  Evaluation Metrics
+
+| Model          | ROUGE-L  | Readability | Compression Ratio | Avg. Similarity | Rank |
+| -------------- | -------- | ----------- | ----------------- | --------------- | ---- |
+| TinyLlama      | 0.42     | 61.2        | 0.27              | 0.72            | 5️⃣  |
+| Phi-2          | 0.53     | 68.9        | 0.31              | 0.81            | 3️⃣  |
+| BART-Large-CNN | 0.61     | 77.3        | 0.35              | 0.84            | 2️⃣  |
+| Gemma-2B-IT    | **0.63** | **79.1**    | **0.36**          | **0.88**        | 🥇   |
+| TextRank       | 0.37     | 55.0        | 0.25              | 0.64            | 4️⃣  |
+
+---
+
+###  Observations
+
+* **Gemma-2B-IT** produced the most fluent and human-like summaries.
+* **BART-Large-CNN** had the best structure and factual retention.
+* **Phi-2** was balanced but less expressive.
+* **TinyLlama** was fastest but least detailed.
+* **TextRank** was good for extractive baselines only.
+
+---
+
+###  Visualization
+
+The notebook includes:
+
+* Bar charts comparing ROUGE, Readability, and Compression across models
+* Semantic similarity heatmaps
+* Time vs Quality comparison plot
+
+---
+
+###  Conclusion
+
+After testing on 10 diverse text domains:
+
+* **Gemma-2B-IT**: Best fluency and natural summaries
+* **BART-Large-CNN**: Best factual accuracy
+* **Phi-2**: Strong balance of readability and logic
+* **TinyLlama**: Fastest, ideal for small summaries
+* **TextRank**: Reliable extractive baseline
+
+ **Final Verdict:** *Gemma-2B-IT* is the most balanced and fluent summarizer overall.
+
+---
+
+###  What I Learned
+
+* Difference between **abstractive** and **extractive** summarization
+* Practical use of **transformer models** in NLP
+* Implementing **interactive UI** with `ipywidgets`
+* Calculating **ROUGE**, **Readability**, and **Semantic Similarity**
+* Evaluating models across different **domains and text types**
+
+---
+Once ready, you’ll get a **direct download link** to `Milestone2_Detailed_Documentation.pdf`.
