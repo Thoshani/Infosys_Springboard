@@ -147,7 +147,8 @@ After testing on 10 diverse text domains:
 * Practical use of **transformer models** in NLP
 * Implementing **interactive UI** with `ipywidgets`
 * Calculating **ROUGE**, **Readability**, and **Semantic Similarity**
-* Evaluating models across different **domains and text types**
+* Evaluating models across different **domains and text types**<img width="1568" height="943" alt="TextMorph_Model_Performance_Heatmap" src="https://github.com/user-attachments/assets/37d2b96b-9854-4d3c-a9cb-7158586ef367" />
+
 
 <img width="426" height="428" alt="Screenshot 2025-10-16 191609" src="https://github.com/user-attachments/assets/206a60b6-ab22-4233-aff7-13957ff0b1f8" />
 <img width="456" height="418" alt="Screenshot 2025-10-16 191548" src="https://github.com/user-attachments/assets/eb87c784-5ae4-4c80-851e-cbc1c9da136d" />
