@@ -150,5 +150,8 @@ After testing on 10 diverse text domains:
 * Calculating **ROUGE**, **Readability**, and **Semantic Similarity**
 * Evaluating models across different **domains and text types**
 
----
-Once ready, you’ll get a **direct download link** to `Milestone2_Detailed_Documentation.pdf`.
+<img width="426" height="428" alt="Screenshot 2025-10-16 191609" src="https://github.com/user-attachments/assets/206a60b6-ab22-4233-aff7-13957ff0b1f8" />
+<img width="456" height="418" alt="Screenshot 2025-10-16 191548" src="https://github.com/user-attachments/assets/eb87c784-5ae4-4c80-851e-cbc1c9da136d" />
+<img width="438" height="410" alt="Screenshot 2025-10-16 191532" src="https://github.com/user-attachments/assets/194df575-f671-4c01-bf91-ffb26c9f8cdd" />
+<img width="423" height="422" alt="Screenshot 2025-10-16 191513" src="https://github.com/user-attachments/assets/813e00cb-12a3-43b2-af07-910e46b99fcc" />
+<img width="516" height="679" alt="Screenshot 2025-10-16 191440" src="https://github.com/user-attachments/assets/6b8fe4ca-e40d-485d-bed4-2a963c05d967" />
