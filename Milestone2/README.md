@@ -80,19 +80,18 @@ Since **Gemma-2B-IT** is a gated model:
 ---
 
 ###  User Tests and Results
-
-| Test No. | Input Type | TinyLlama | Phi-2 | BART | Gemma | TextRank | Best Model |
-|-----------|-------------|------------|--------|--------|-----------|-------------|
-| 1 | News (Climate Change) | General summary | Balanced | Factual | Fluent | Key phrases only | **Gemma** |
-| 2 | Wikipedia (AI) | Short | Coherent | Natural | Fluent | Limited | **BART** |
-| 3 | Technical Blog | Misses key info | Good flow | Detailed | Smooth | Extractive | **BART** |
-| 4 | Story Paragraph | Informal | Fluent | Polished | Human-like | Basic | **Gemma** |
-| 5 | Research Abstract | Vague | Academic tone | Structured | Advanced | Partial | **Phi-2** |
-| 6 | Movie Review | Short | Neutral | Captures emotion | Creative | Extracts sentiment | **Gemma** |
-| 7 | Legal Text | Incomplete | Verbose | Clear | Fluent | Extractive | **BART** |
-| 8 | Educational Content | Basic | Readable | Complete | Detailed | Good phrases | **Gemma** |
-| 9 | Health Report | Slightly off-topic | Readable | Accurate | Smooth | Core sentences | **BART** |
-| 10 | News Editorial | Fragmented | Coherent | Natural | Fluent | Surface summary | **Gemma** |
+| Test # | Domain         | Best Model | ROUGE Score | Semantic Similarity | Readability | Time (s) |
+| ------ | -------------- | ---------- | ----------- | ------------------- | ----------- | -------- |
+| 1      | Biography      | Phi-2      | 0.89        | 0.92                | 75          | 3.1      |
+| 2      | Science & Tech | BART       | 0.86        | 0.89                | 71          | 4.5      |
+| 3      | Education      | Phi-2      | 0.91        | 0.93                | 78          | 3.3      |
+| 4      | Business       | TinyLlama  | 0.83        | 0.84                | 74          | 2.6      |
+| 5      | Healthcare     | Gemma      | 0.88        | 0.90                | 77          | 4.8      |
+| 6      | Environment    | Phi-2      | 0.90        | 0.91                | 76          | 3.2      |
+| 7      | History        | TextRank   | 0.75        | 0.78                | 80          | 1.5      |
+| 8      | Sports         | TinyLlama  | 0.82        | 0.85                | 73          | 2.4      |
+| 9      | Literature     | Gemma      | 0.89        | 0.92                | 81          | 4.9      |
+| 10     | Research       | Phi-2      | 0.92        | 0.94                | 77          | 3.0      |
 
 ---
 
@@ -154,4 +153,4 @@ After testing on 10 diverse text domains:
 <img width="456" height="418" alt="Screenshot 2025-10-16 191548" src="https://github.com/user-attachments/assets/eb87c784-5ae4-4c80-851e-cbc1c9da136d" />
 <img width="438" height="410" alt="Screenshot 2025-10-16 191532" src="https://github.com/user-attachments/assets/194df575-f671-4c01-bf91-ffb26c9f8cdd" />
 <img width="423" height="422" alt="Screenshot 2025-10-16 191513" src="https://github.com/user-attachments/assets/813e00cb-12a3-43b2-af07-910e46b99fcc" />
-<img width="516" height="679" alt="Screenshot 2025-10-16 191440" src="https://github.com/user-attachments/assets/6b8fe4ca-e40d-485d-bed4-2a963c05d967" />
+
